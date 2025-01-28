@@ -1,0 +1,39 @@
+# Topics covered in this project:
+# - Importing modules (random)
+# - Using loops (while loop)
+# - Conditional statements (if, elif, else)
+# - User input handling
+# - Basic arithmetic operations (incrementing a counter)
+# - String manipulation and formatting
+---------------------Project1::-Rolling the Dice-------------------------------------
+import random  # Import the random module to generate random numbers
+
+# Rolling the dice project
+dice_count = 0  # Initialize a counter to track the number of rolls
+
+# Main loop to keep the game running until the user decides to stop
+while True:
+    # Get user input and convert it to lowercase for consistency
+    user_input = input("Roll the dice? (y/n): ").lower()  
+    
+    # Check if the user wants to roll the dice
+    if user_input == 'y':
+        # Roll two dice by generating random numbers between 1 and 6
+        num1 = random.randint(1, 6)  # Roll the first die
+        num2 = random.randint(1, 6)  # Roll the second die
+        
+        # Display the result of the dice rolls to the user
+        print("You rolled a " + str(num1) + " and a " + str(num2) + ".")
+        
+        # Increment the roll count and display it
+        dice_count += 1
+        print("You have rolled the dice for " + str(dice_count) + " times.")
+        
+    # Check if the user wants to exit the game
+    elif user_input == 'n':
+        print("Thanks for playing!")  # Thank the user for playing
+        break  # Exit the loop if the user chooses not to roll
+        
+    # Handle invalid input from the user
+    else:
+        print("Invalid choice! Please enter 'y' or 'n'.")  # Error message for invalid input
